@@ -1,22 +1,27 @@
+import { CommonModule, NgTemplateOutlet } from '@angular/common';
 import { TemplateRef } from '@angular/core';
 import { ContentChild } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-miresponsive-data',
+  standalone: true,
+  imports: [MiresponsiveDataComponent,NgTemplateOutlet,CommonModule
+],
   templateUrl: './miresponsive-data.component.html',
   styleUrls: ['./miresponsive-data.component.css']
 })
 export class MiresponsiveDataComponent implements OnInit {
 
   @Input() plantilla:any;
-  @Input() base:TemplateRef<any>;
+  @Input() base!:TemplateRef<any>;
   @Input() dataList:any;
   //@ViewChild('action') action: TemplateRef<any>;
-  @ContentChild('action') action: TemplateRef<any>;
-  @ContentChild('content') content: TemplateRef<any>;
+  @ContentChild('action') action!: TemplateRef<any>;
+  @ContentChild('content') content!: TemplateRef<any>;
 
 
    startX = 0;

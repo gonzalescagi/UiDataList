@@ -10,7 +10,7 @@
               <ng-container *ngTemplateOutlet="content; context: { $implicit: item, index: i }"></ng-container>
           </div>
           <div class="action">
-              <ng-container *ngTemplateOutlet="action"></ng-container>
+              <ng-container *ngTemplateOutlet="action; context: { $implicit: item, index: i }"></ng-container>
           </div>
       
     </div>
