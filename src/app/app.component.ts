@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  styleUrl: './app.component.scss'
 })
-export class AppComponent  {
-  name = 'Angular 6';
+export class AppComponent {
+  title = 'UiDataList';
 }
